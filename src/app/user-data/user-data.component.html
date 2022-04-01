@@ -1,0 +1,12 @@
+<div class="container">
+    <p *ngIf="loading">Loading...</p>
+    <ul *ngFor="let people of peopleData">
+        <li>{{people.id}} - </li>
+        <li>{{people.firstName}}</li>
+        <li>{{people.lastName}}</li>
+    </ul>
+    <p *ngIf="!loading">JSON DATA:</p>
+    <pre>
+        {{peopleData | json}}
+    </pre>
+</div>
